@@ -2,5 +2,37 @@ html,
 body,
 #root {
     height: 100%;
-    margin: 0;
+    margin: 100px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;/* Расположение элементов по всей оси X с одинаковыми промежутками */
+    width: 700px; /* Ширина контейнера */
+    height: 300px; /* Высота контейнера */
+    margin: 0 auto; /* Центрирует контейнер по горизонтали */
+}
+
+div {
+    width: 100px; /* Ширина круга */
+    height: 100px; /* Высота круга */
+    background-color: #DAA520; /* Цвет элементов */
+    border-radius: 50%; /* Делает элемент кругом */
+}
+
+/* стиль для 1 и 5 div */
+div:nth-child(1),
+div:nth-child(5) {
+    align-self: flex-start;
+}
+
+/* стиль для 2 и 4 div */
+div:nth-child(2),
+div:nth-child(4) {
+    align-self: center;
+}
+
+/* стиль для 3 div */
+div:nth-child(3) {
+    align-self: flex-end;
 }
